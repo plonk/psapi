@@ -6,9 +6,11 @@ module PSAPI
     include PeercastStation
 
     def check_bandwidth
+      checkBandwidth
     end
 
     def check_ports
+      checkPorts
     end
 
     def check_update
