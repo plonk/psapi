@@ -7,7 +7,7 @@ module PSAPI
 
     def initialize(hash)
       mass_assign(hash)
-      @channels = hash['channels'].map { |h|
+      @announcings = hash['channels'].map { |h|
         Announcing.new(h)
       }
       @protocol = hash['protocol']
