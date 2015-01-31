@@ -6,7 +6,7 @@ module PSAPI
     attr_reader :announcings
 
     def initialize(hash)
-      mass_assign(hash)
+      super
       @announcings = hash['channels'].map { |h|
         Announcing.new(h)
       }
@@ -21,13 +21,11 @@ module PSAPI
     # 掲載しているチャンネル
     class Announcing < API_Object
       accessors_for %w(channelId status)
-      def initialize(hash)
-        mass_assign(hash)
-      end
 
       def channel
         Channel.find(channel_id)
       end
+
     end
 
     def save
@@ -38,12 +36,8 @@ module PSAPI
 
     class Protocol < API_Object
       define_all_with(:getYellowPageProtocols)
-
       accessors_for %w(name protocol)
 
-      def initialize(hash)
-        mass_assign(hash)
-      end
     end
 
   end

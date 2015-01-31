@@ -15,7 +15,7 @@ module PSAPI
                      trackArtist trackGenre trackUrl favorite)
 
     def initialize(hash = {})
-      mass_assign(hash)
+      super
     end
 
     def save

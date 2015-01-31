@@ -68,26 +68,16 @@ module PSAPI
     class Status < API_Object
       accessors_for %w(status source uptime localRelays localDirects totalRelays totalDirects isBroadcasting isRelayFull isDirectFull isReceiving)
 
-      def initialize(hash)
-        mass_assign(hash)
-      end
     end
 
     class Info < API_Object
       accessors_for %w(name url genre desc comment bitrate contentType mimeType)
-
-      def initialize(hash)
-        mass_assign(hash)
-      end
 
     end
 
     class Track < API_Object
       accessors_for %w(name genre album creator url)
 
-      def initialize(hash)
-        mass_assign(hash)
-      end
     end
 
   end
