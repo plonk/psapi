@@ -1,10 +1,6 @@
 module PSAPI
-  class Listener
-    class << self
-      def all
-        getListeners.map(&Listener.method(:new))
-      end
-    end
+  class Listener < API_Object
+    define_all_with :getListeners
 
     def reset_authentication_key
     end
