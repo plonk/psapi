@@ -2,13 +2,10 @@ module PSAPI
   class Channel < API_Object
     define_all_with(:getChannels)
     def self.find(id)
-      Channel.new({ 'channelId' => id, 'status' => getChannelStatus(id),
-                    'info' => getChannelInfo(id)['info'] })
-    rescue
-      nil
+      Channel.new({ 'channelId' => id, 'status' => getChannelStatus(id) }.merge(getChannelInfo(id)))
     end
 
-    attr_accessor :status, :info, :yellow_pages
+    attr_accessor :status, :info
     attr_accessor :track
 
     def initialize(hash = {})
@@ -16,7 +13,14 @@ module PSAPI
       @info   = Info.new(hash['info'] || {})
       @track  = Track.new(hash['track'])
 
-      @yellow_pages = (hash['yellowPages'] || []).map(&YellowPage.method(:new))
+      @yellow_pages = (hash['yellowPages'] || [])
+    end
+
+    def yellow_pages
+      yps = YellowPage.all
+      @yellow_pages.map { |yellowPageId:|
+        yps.find { |y| y.yellow_page_id == yellowPageId } or fail "yellow page id #{yellowPageId} not found"
+      }
     end
 
     class Connection
