@@ -51,6 +51,10 @@ module PSAPI
       end
     end
 
+   def initialize(hash)
+      mass_assign(hash)
+   end
+
   end
 
 end

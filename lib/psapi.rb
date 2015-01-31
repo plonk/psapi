@@ -3,6 +3,8 @@ require_relative 'psapi/peercast_station'
 
 module PSAPI
   class << self
+    include PeercastStation
+
     def check_bandwidth
     end
 
@@ -16,15 +18,18 @@ module PSAPI
     end
 
     def settings
+      Settings.new(getSettings)
     end
 
     def settings=(new_settings)
     end
 
     def status
+      Status.new(getStatus)
     end
 
     def version_info
+      VersionInfo.new(getVersionInfo)
     end
   end
 
