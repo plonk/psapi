@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class Plugin
     class << self
       def all

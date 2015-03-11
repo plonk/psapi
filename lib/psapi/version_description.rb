@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   # getNewVersions
   class VersionDescription
     class Enclosure

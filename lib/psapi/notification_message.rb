@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class NotificationMesssage
     class << self
       def all

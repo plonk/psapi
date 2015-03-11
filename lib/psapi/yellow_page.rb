@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class YellowPage < API_Object
     define_all_with(:getYellowPages)
 

@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class Listener < API_Object
     define_all_with :getListeners
 

@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class API_Object
     include PeercastStation
     include Internal

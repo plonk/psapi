@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class Log
     class Settings
       attr_reader :level

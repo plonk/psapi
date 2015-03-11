@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class SourceStream
     class << self
       def all

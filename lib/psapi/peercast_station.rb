@@ -1,6 +1,6 @@
 require 'jimson'
 
-module PSAPI
+module Psapi
   module PeercastStation
     class << self
       def initialize(host, port)

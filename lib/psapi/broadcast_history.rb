@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class BroadcastHistory < API_Object
     class << self
       include PeercastStation

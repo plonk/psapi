@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class Channel < API_Object
     define_all_with(:getChannels)
     def self.find(id)

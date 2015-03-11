@@ -1,7 +1,7 @@
 # PeerCast Station API
 require_relative 'psapi/peercast_station'
 
-module PSAPI
+module Psapi
   class << self
     include PeercastStation
 

@@ -1,4 +1,4 @@
-module PSAPI
+module Psapi
   class ContentReader
     class << self
       def all

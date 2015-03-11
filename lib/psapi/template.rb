@@ -1,2 +1,2 @@
-module PSAPI
+module Psapi
 end
