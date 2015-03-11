@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Psapi::VERSION
   spec.authors       = ["Yoteichi"]
   spec.email         = ["plonk@piano.email.ne.jp"]
-  spec.summary       = "A wrapper library for PeerCastStation Web API"
+  spec.summary       = "A wrapper library for the PeerCastStation Web API"
   #spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "GPL-2.0"
