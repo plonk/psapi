@@ -63,3 +63,4 @@ require_relative 'psapi/status'
 require_relative 'psapi/version_description'
 require_relative 'psapi/version_info'
 require_relative 'psapi/yellow_page'
+require "psapi/version"
