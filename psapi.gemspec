@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["plonk@piano.email.ne.jp"]
   spec.summary       = "A wrapper library for the PeerCastStation Web API"
   #spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/plonk/psapi"
   spec.license       = "GPL-2.0"
 
   spec.files         = `git ls-files -z`.split("\x0")
