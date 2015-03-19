@@ -5,10 +5,12 @@ module Psapi
       Channel.new({ 'channelId' => id, 'status' => getChannelStatus(id) }.merge(getChannelInfo(id)))
     end
 
+    attr_accessor :channel_id
     attr_accessor :status, :info
     attr_accessor :track
 
     def initialize(hash = {})
+      super
       @status = Status.new(hash['status'] || {})
       @info   = Info.new(hash['info'] || {})
       @track  = Track.new(hash['track'])
